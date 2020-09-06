@@ -17,6 +17,10 @@ body {
   display: none;
 }
 
+.active-indicator {
+  background-color: var(--yellow) !important;
+}
+
 .container {
   max-width: 800px;
   height: 400px;
@@ -68,6 +72,7 @@ body {
   font-size: 30px;
   color: #fff;
   transition: color 0.2s;
+  pointer-events: none;
 }
 
 .carousel-indicators {
@@ -92,4 +97,21 @@ body {
 
 .carousel-indicator:hover {
   background-color: var(--yellow);
+}
+
+/* Animation */
+
+.fade {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
