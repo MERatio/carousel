@@ -47,6 +47,11 @@ const slide = (() => {
     show(index);
   };
 
+  const indicator = (e) => {
+    const index = parseInt(e.target.dataset.indicator, 10);
+    show(state.updateIndex(index));
+  };
+
   const show = (index) => {
     const carouselItems = domItems.carouselItems;
     const carouselIndicators = domItems.carouselIndicators;
@@ -64,6 +69,7 @@ const slide = (() => {
 
   return {
     prevNext,
+    indicator,
     show,
   };
 })();
@@ -72,6 +78,10 @@ const init = () => {
   domItems.carouselControls.forEach((carouselControl) =>
     carouselControl.addEventListener('click', slide.prevNext)
   );
+  domItems.carouselIndicators.forEach((carouselIndicator) => {
+    carouselIndicator.addEventListener('click', slide.indicator);
+  });
+
   slide.show(state.getIndex());
 };
 
