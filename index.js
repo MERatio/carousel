@@ -37,6 +37,13 @@ const state = (() => {
 })();
 
 const slide = (() => {
+  let slideIntervalID;
+
+  const _resetSlideInterval = () => {
+    clearInterval(slideIntervalID);
+    activateInterval();
+  };
+
   const prevNext = (e) => {
     let index = state.getIndex();
     const control = e.target.dataset.control;
@@ -45,11 +52,13 @@ const slide = (() => {
         ? state.updateIndex(index - 1)
         : state.updateIndex(index + 1);
     show(index);
+    _resetSlideInterval();
   };
 
   const indicator = (e) => {
     const index = parseInt(e.target.dataset.indicator, 10);
     show(state.updateIndex(index));
+    _resetSlideInterval();
   };
 
   const show = (index) => {
@@ -67,10 +76,17 @@ const slide = (() => {
     }
   };
 
+  const activateInterval = () => {
+    slideIntervalID = setInterval(() => {
+      show(state.updateIndex(state.getIndex() + 1));
+    }, 5000);
+  };
+
   return {
     prevNext,
     indicator,
     show,
+    activateInterval,
   };
 })();
 
@@ -81,8 +97,8 @@ const init = () => {
   domItems.carouselIndicators.forEach((carouselIndicator) => {
     carouselIndicator.addEventListener('click', slide.indicator);
   });
-
   slide.show(state.getIndex());
+  slide.activateInterval();
 };
 
 init();
