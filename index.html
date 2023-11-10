@@ -8,6 +8,7 @@
     <script src="./index.js" defer></script>
   </head>
   <body>
+    <!-- Carousel 1 Start -->
     <div class="container">
       <div class="carousel" id="natureCarousel">
         <div class="carouselItem carousel-item active">
@@ -114,5 +115,115 @@
         </div>
       </div>
     </div>
+    <!-- Carousel 1 End -->
+
+    <!-- Carousel 2 Start -->
+    <div class="container">
+      <div class="carousel" id="natureCarousel2">
+        <div class="carouselItem carousel-item active">
+          <img
+            src="./images/snowy-mountain.jpg"
+            alt="A large mountain covered in snow under a blue sky"
+          />
+          <p>
+            Photo by
+            <a
+              href="https://unsplash.com/@marekpiwnicki?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Marek Piwnicki</a
+            >
+            on
+            <a
+              href="https://unsplash.com/photos/a-large-mountain-covered-in-snow-under-a-blue-sky-Ef3jVcCqS0Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+        <div class="carouselItem carousel-item">
+          <img
+            src="./images/sunset.jpg"
+            alt="The Sun is setting over a bodt of water"
+          />
+          <p>
+            Photo by
+            <a
+              href="https://unsplash.com/@caipod?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Cai Fang</a
+            >
+            on
+            <a
+              href="https://unsplash.com/photos/the-sun-is-setting-over-a-body-of-water-6O9W0mac9-s?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+        <div class="carouselItem carousel-item">
+          <img src="./images/forest.jpg" alt="Green leafed trees" />
+
+          <p>
+            Photo by
+            <a
+              href="https://unsplash.com/@iriser?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Irina Iriser</a
+            >
+            on
+            <a
+              href="https://unsplash.com/photos/green-leafed-trees-2Y4dE8sdhlc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+        <button
+          type="button"
+          class="carouselControl carouselControlPrev carousel-control carousel-control-prev"
+          data-target="#natureCarousel2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path
+              d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"
+            />
+          </svg>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          type="button"
+          class="carouselControl carouselControlNext carousel-control carousel-control-next"
+          data-target="#natureCarousel2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path
+              d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
+            />
+          </svg>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            class="carouselIndicator carousel-indicator active"
+            data-target="#natureCarousel2"
+            data-move-to="0"
+          >
+            &#9899;
+          </button>
+          <button
+            type="button"
+            class="carouselIndicator carousel-indicator"
+            data-target="#natureCarousel2"
+            data-move-to="1"
+          >
+            &#9898;
+          </button>
+          <button
+            type="button"
+            class="carouselIndicator carousel-indicator"
+            data-target="#natureCarousel2"
+            data-move-to="2"
+          >
+            &#9898;
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel 2 End -->
   </body>
 </html>
