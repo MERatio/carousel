@@ -19,14 +19,24 @@ function activateCarouselIndicator(carousel, index) {
   newActiveCarouselIndicator.innerHTML = "&#9899;";
 }
 
+function moveCarousel(carousel, index) {
+  const carouselItems = carousel.querySelectorAll(".carouselItem");
+  const activeCarouselItem = carousel.querySelector(".carouselItem.active");
+  const newActiveCarouselItem = carouselItems[index];
+  activeCarouselItem.classList.remove("active");
+  newActiveCarouselItem.classList.add("active");
+  deactivateActivateCarouselIndicator(carousel);
+  activateCarouselIndicator(carousel, index);
+}
+
 function handleCarouselControlClick(e) {
   const carousel = document.querySelector(e.target.dataset.target);
   const carouselItems = carousel.querySelectorAll(".carouselItem");
-  const indexPad = e.target.classList.contains("carouselControlPrev") ? -1 : 1;
   const activeCarouselItem = carousel.querySelector(".carouselItem.active");
   const activeCarouselItemIndex = [...carouselItems].indexOf(
     activeCarouselItem,
   );
+  const indexPad = e.target.classList.contains("carouselControlPrev") ? -1 : 1;
   let newActiveCarouselItemIndex = activeCarouselItemIndex + indexPad;
   if (newActiveCarouselItemIndex <= -1) {
     newActiveCarouselItemIndex = carouselItems.length - 1;
@@ -34,23 +44,13 @@ function handleCarouselControlClick(e) {
     newActiveCarouselItemIndex = 0;
   }
 
-  const newActiveCarouselItem = carouselItems[newActiveCarouselItemIndex];
-  activeCarouselItem.classList.remove("active");
-  newActiveCarouselItem.classList.add("active");
-  deactivateActivateCarouselIndicator(carousel);
-  activateCarouselIndicator(carousel, newActiveCarouselItemIndex);
+  moveCarousel(carousel, newActiveCarouselItemIndex);
 }
 
 function handleCarouselIndicatorClick(e) {
   const carousel = document.querySelector(e.target.dataset.target);
-  const carouselItems = carousel.querySelectorAll(".carouselItem");
   const newActiveCarouselItemIndex = e.target.dataset.moveTo;
-  const activeCarouselItem = carousel.querySelector(".carouselItem.active");
-  const newActiveCarouselItem = carouselItems[newActiveCarouselItemIndex];
-  activeCarouselItem.classList.remove("active");
-  newActiveCarouselItem.classList.add("active");
-  deactivateActivateCarouselIndicator(carousel);
-  activateCarouselIndicator(carousel, newActiveCarouselItemIndex);
+  moveCarousel(carousel, newActiveCarouselItemIndex);
 }
 
 for (const carouselControl of carouselControls) {
