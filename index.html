@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carousel</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <div id="natureCarousel" class="container">
       <div class="carousel">
-        <div class="carousel-item">
+        <div class="carouselItem carousel-item active">
           <img
             src="./images/snowy-mountain.jpg"
             alt="A large mountain covered in snow under a blue sky"
@@ -27,7 +28,7 @@
             >
           </p>
         </div>
-        <div class="carousel-item">
+        <div class="carouselItem carousel-item">
           <img
             src="./images/sunset.jpg"
             alt="The Sun is setting over a bodt of water"
@@ -45,7 +46,7 @@
             >
           </p>
         </div>
-        <div class="carousel-item">
+        <div class="carouselItem carousel-item">
           <img src="./images/forest.jpg" alt="Green leafed trees" />
 
           <p>
@@ -63,7 +64,7 @@
         </div>
         <button
           type="button"
-          class="carousel-control carousel-control-prev"
+          class="carouselControl carouselControlPrev carousel-control carousel-control-prev"
           data-target="#natureCarousel"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -75,7 +76,7 @@
         </button>
         <button
           type="button"
-          class="carousel-control carousel-control-next"
+          class="carouselControl carouselControlNext carousel-control carousel-control-next"
           data-target="#natureCarousel"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
