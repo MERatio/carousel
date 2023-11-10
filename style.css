@@ -1,3 +1,7 @@
+:root {
+  --gray: #cbd5e1;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -61,7 +65,7 @@ body {
   padding: 8px;
   background-color: rgb(0, 0, 0, 0.4);
   position: absolute;
-  bottom: 10px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -81,7 +85,7 @@ body {
   padding: 0;
   background-color: transparent;
   border: none;
-  fill: #cbd5e1;
+  fill: var(--gray);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -104,4 +108,22 @@ body {
 
 .carousel-control-next {
   right: 8px;
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-indicator {
+  font-size: 2rem;
+  color: var(--gray);
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
