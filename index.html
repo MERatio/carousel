@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="natureCarousel" class="container">
+      <div class="carousel">
+        <div class="carousel-item">
+          <img
+            src="./images/snowy-mountain.jpg"
+            alt="A large mountain covered in snow under a blue sky"
+          />
+          <p>
+            Photo by
+            <a
+              href="https://unsplash.com/@marekpiwnicki?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Marek Piwnicki</a
+            >
+            on
+            <a
+              href="https://unsplash.com/photos/a-large-mountain-covered-in-snow-under-a-blue-sky-Ef3jVcCqS0Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./images/sunset.jpg"
+            alt="The Sun is setting over a bodt of water"
+          />
+          <p>
+            Photo by
+            <a
+              href="https://unsplash.com/@caipod?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Cai Fang</a
+            >
+            on
+            <a
+              href="https://unsplash.com/photos/the-sun-is-setting-over-a-body-of-water-6O9W0mac9-s?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/forest.jpg" alt="Green leafed trees" />
+
+          <p>
+            Photo by
+            <a
+              href="https://unsplash.com/@iriser?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Irina Iriser</a
+            >
+            on
+            <a
+              href="https://unsplash.com/photos/green-leafed-trees-2Y4dE8sdhlc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+        <button
+          type="button"
+          class="carousel-control carousel-control-prev"
+          data-target="#natureCarousel"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path
+              d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"
+            />
+          </svg>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          type="button"
+          class="carousel-control carousel-control-next"
+          data-target="#natureCarousel"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path
+              d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
+            />
+          </svg>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
